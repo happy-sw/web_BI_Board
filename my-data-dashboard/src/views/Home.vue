@@ -1,8 +1,20 @@
 <template>
-  <div class="constainer"></div>
+  <div class="constainer">
+    <div class="header">
+      <Title />
+    </div>
+    <div class="main">
+      <div class="main-left"></div>
+      <div class="main-center"></div>
+      <div class="main-right"></div>
+    </div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Title from "@/components/title/index.vue";
+import "./assets/css/home.scss";
+</script>
 
 <style lang="scss" scoped>
 .constainer {
