@@ -1,7 +1,7 @@
 <template>
   <div class="constainer">
     <div class="header">
-      <Title />
+      <Title></Title>
     </div>
     <div class="main">
       <div class="main-left"></div>
@@ -25,13 +25,13 @@ import "@/assets/css/home.scss";
   background-size: cover;
   background-position: center center;
 
-  /* 半透明遮罩 */
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* 可调整透明度 */
-    pointer-events: none;
-  }
+  // /* 半透明遮罩 */
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   background: rgba(0, 0, 0, 0.4); /* 可调整透明度 */
+  //   pointer-events: none;
+  // }
 }
 </style>

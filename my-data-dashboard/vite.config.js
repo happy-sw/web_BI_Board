@@ -1,11 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
+import svgLoader from "vite-svg-loader";
 
 // https://vite.dev/config/
 export default defineConfig({
   // 插件配置
-  plugins: [vue()],
+  plugins: [vue(), svgLoader()],
 
   //css预处理器
   css: {
