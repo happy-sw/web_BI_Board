@@ -13,7 +13,7 @@
 
 <script setup>
 import Title from "@/components/title/index.vue";
-import "./assets/css/home.scss";
+import "@/assets/css/home.scss";
 </script>
 
 <style lang="scss" scoped>
