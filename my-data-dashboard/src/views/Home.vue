@@ -4,15 +4,24 @@
       <Title></Title>
     </div>
     <div class="main">
-      <div class="main-left"></div>
-      <div class="main-center"></div>
-      <div class="main-right"></div>
+      <div class="main-left">
+        <LeftContent></LeftContent>
+      </div>
+      <div class="main-center">
+        <CenterContent></CenterContent>
+      </div>
+      <div class="main-right">
+        <RightContent></RightContent>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import Title from "@/components/title/index.vue";
+import Title from "@/views/title/index.vue";
+import LeftContent from "@/views/leftContent/index.vue";
+import CenterContent from "@/views/centerContent/index.vue";
+import RightContent from "@/views/rightContent/index.vue";
 import "@/assets/css/home.scss";
 </script>
 
@@ -24,14 +33,5 @@ import "@/assets/css/home.scss";
   background-image: url("../assets/img/pageBg.png");
   background-size: cover;
   background-position: center center;
-
-  // /* 半透明遮罩 */
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   inset: 0;
-  //   background: rgba(0, 0, 0, 0.4); /* 可调整透明度 */
-  //   pointer-events: none;
-  // }
 }
 </style>
