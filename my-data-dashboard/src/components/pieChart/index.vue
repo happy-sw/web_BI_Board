@@ -25,7 +25,6 @@ use([
 ]);
 
 const colors = ["#00ffff", "#00ff66", "#33ccff", "#ffff66", "#66ffff"];
-const backgroundColor = "#0d2235";
 
 // 环形数据
 const data = [
@@ -75,7 +74,6 @@ const series = data.map((item, index) => {
 });
 
 const option = ref({
-  backgroundColor,
   title: {
     text: "占比统计表",
     left: "center",
@@ -87,6 +85,10 @@ const option = ref({
   },
   tooltip: {
     trigger: "item",
+  },
+  legend: {
+    orient: "vertical",
+    left: "right",
   },
   series,
 });
