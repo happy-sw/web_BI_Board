@@ -16,6 +16,8 @@ import {
   GridComponent,
   LegendComponent,
 } from "echarts/components";
+import { graphic } from "echarts/core";
+
 // 注册 ECharts 组件
 use([
   CanvasRenderer,
@@ -27,7 +29,7 @@ use([
 ]);
 
 const option = ref({
-  backgroundColor: "#0f2c4c",
+  color: ["#80FFA5", "#00DDFF", "#37A2FF", "#FF0087", "#FFBF00"],
   title: {
     text: "风险趋势图",
     left: "left",
@@ -81,8 +83,22 @@ const option = ref({
       type: "line",
       stack: "总量",
       smooth: true,
+      lineStyle: {
+        width: 0,
+      },
+      showSymbol: false,
       areaStyle: {
-        color: "#4ee2e2",
+        opacity: 0.8,
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: "rgb(128, 255, 165)",
+          },
+          {
+            offset: 1,
+            color: "rgb(1, 191, 236)",
+          },
+        ]),
       },
       emphasis: { focus: "series" },
       data: [200, 300, 400, 300, 500, 400],
@@ -92,8 +108,22 @@ const option = ref({
       type: "line",
       stack: "总量",
       smooth: true,
+      lineStyle: {
+        width: 0,
+      },
+      showSymbol: false,
       areaStyle: {
-        color: "#41b1f2",
+        opacity: 0.8,
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: "rgb(0, 221, 255)",
+          },
+          {
+            offset: 1,
+            color: "rgb(77, 119, 255)",
+          },
+        ]),
       },
       emphasis: { focus: "series" },
       data: [100, 200, 300, 300, 400, 300],
@@ -103,8 +133,22 @@ const option = ref({
       type: "line",
       stack: "总量",
       smooth: true,
+      lineStyle: {
+        width: 0,
+      },
+      showSymbol: false,
       areaStyle: {
-        color: "#aa4ff2",
+        opacity: 0.8,
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: "rgb(55, 162, 255)",
+          },
+          {
+            offset: 1,
+            color: "rgb(116, 21, 219)",
+          },
+        ]),
       },
       emphasis: { focus: "series" },
       data: [150, 150, 200, 200, 300, 250],
@@ -114,8 +158,22 @@ const option = ref({
       type: "line",
       stack: "总量",
       smooth: true,
+      lineStyle: {
+        width: 0,
+      },
+      showSymbol: false,
       areaStyle: {
-        color: "#f26adf",
+        opacity: 0.8,
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: "rgb(255, 0, 135)",
+          },
+          {
+            offset: 1,
+            color: "rgb(135, 0, 157)",
+          },
+        ]),
       },
       emphasis: { focus: "series" },
       data: [100, 120, 180, 200, 250, 300],
@@ -125,8 +183,26 @@ const option = ref({
       type: "line",
       stack: "总量",
       smooth: true,
+      lineStyle: {
+        width: 0,
+      },
+      showSymbol: false,
+      label: {
+        show: true,
+        position: "top",
+      },
       areaStyle: {
-        color: "#f2a14b",
+        opacity: 0.8,
+        color: new graphic.LinearGradient(0, 0, 0, 1, [
+          {
+            offset: 0,
+            color: "rgb(255, 191, 0)",
+          },
+          {
+            offset: 1,
+            color: "rgb(224, 62, 76)",
+          },
+        ]),
       },
       emphasis: { focus: "series" },
       data: [50, 100, 150, 200, 220, 250],
