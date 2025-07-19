@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-chart :option="option" autoresize style="height: 400px"></v-chart>
+    <v-chart :option="option" autoresize style="height: 200px"></v-chart>
   </div>
 </template>
 
@@ -80,7 +80,6 @@ const option = ref({
     top: 10,
     textStyle: {
       color: "#c0e6ff",
-      fontSize: 16,
     },
   },
   tooltip: {
