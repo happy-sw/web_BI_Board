@@ -33,7 +33,10 @@
           <RiskRankList></RiskRankList>
         </div>
       </div>
-      <div>3</div>
+      <div class="overview_wrap">
+        <FunnelChart></FunnelChart>
+        <RoseChart></RoseChart>
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +46,8 @@ import WaveChart from "@/components/waveChart/index.vue";
 import StatCard from "@/components/statCard/index.vue";
 import RingChart from "@/components/ringChart/index.vue";
 import RiskRankList from "@/components/riskRankList/index.vue";
+import RoseChart from "@/components/roseChart/index.vue";
+import FunnelChart from "@/components/funnelChart/index.vue";
 </script>
 
 <style scoped lang="scss">
@@ -73,5 +78,11 @@ import RiskRankList from "@/components/riskRankList/index.vue";
 .overview_right {
   // flex: 2;
   width: 50%;
+}
+.overview_wrap {
+  display: flex;
+  gap: 2px;
+  height: 100%;
+  justify-content: space-between;
 }
 </style>
