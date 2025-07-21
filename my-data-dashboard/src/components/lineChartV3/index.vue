@@ -117,7 +117,7 @@ const option = ref({
       },
     },
     {
-      name: "总数据量",
+      name: "订单数量",
       type: "line",
       yAxisIndex: 1,
       data: sum,
@@ -148,7 +148,7 @@ const option = ref({
       },
     },
     {
-      name: "",
+      name: "总数据量",
       type: "line",
       yAxisIndex: 1,
       data: orders,

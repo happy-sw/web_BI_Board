@@ -4,21 +4,33 @@
       <div>
         <WaveChart></WaveChart>
       </div>
-      <div class="center_info">
-        <!-- 左侧区域 -->
-        <div class="center_info_card">
-          <!-- 上半部分 -->
-          <div class="center_info_card_top">
-            <InfoCard></InfoCard>
+      <div class="overview_panel">
+        <!-- 左侧 -->
+        <div class="overview_left">
+          <div class="card_row">
+            <StatCard title="S88公司" subtiltle="我是数据监测词"></StatCard>
+            <StatCard title="S88公司" subtiltle="我是数据监测词"></StatCard>
           </div>
-          <!-- 下半部分 -->
-          <div class="center_info_card_bottom">
-            <CountUp></CountUp>
+          <div class="ring_row">
+            <RingChart
+              :value="698"
+              :label="'贷款'"
+              :colors="'#00ff99'"
+            ></RingChart>
+            <RingChart
+              :value="131"
+              :label="'攻击'"
+              :colors="'#ffe066'"
+            ></RingChart>
+            <RingChart
+              :value="32"
+              :label="'信用'"
+              :colors="'#ff80b0'"
+            ></RingChart>
           </div>
         </div>
-        <!-- 右侧区域 -->
-        <div class="center_info_search">
-          <SearchTable></SearchTable>
+        <div class="overview_right">
+          <RiskRankList></RiskRankList>
         </div>
       </div>
       <div>3</div>
@@ -28,36 +40,38 @@
 
 <script setup>
 import WaveChart from "@/components/waveChart/index.vue";
-import InfoCard from "@/components/infoCard/index.vue";
-import CountUp from "@/components/countUp/index.vue";
-import SearchTable from "@/components/searchTable/index.vue";
+import StatCard from "@/components/statCard/index.vue";
+import RingChart from "@/components/ringChart/index.vue";
+import RiskRankList from "@/components/riskRankList/index.vue";
 </script>
 
 <style scoped lang="scss">
-.center_info {
-  border: 1px solid red;
+.overview_panel {
   display: flex;
-  box-sizing: border-box;
-
-  .center_info_card {
-    border: 1px solid red;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    .center_info_card_top {
-      flex: 1;
-    }
-    .center_info_card_bottom {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  .center_info_search {
-    border: 1px solid red;
-    flex: 1;
-  }
+  // justify-content: center;
+  // align-items: center;
+  gap: 2px;
+  padding: 2px;
+}
+.overview_left {
+  // flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 50%;
+}
+.card_row {
+  display: flex;
+  gap: 2px;
+  height: 30%;
+}
+.ring_row {
+  display: flex;
+  justify-content: space-between;
+  height: 60%;
+}
+.overview_right {
+  // flex: 2;
+  width: 50%;
 }
 </style>
